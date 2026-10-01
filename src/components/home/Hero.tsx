@@ -13,7 +13,7 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
-import { LiveDashboardSimulator } from "./LiveDashboardSimulator";
+import { InteractiveShiftTimeline } from "./InteractiveShiftTimeline";
 
 export function Hero() {
   return (
@@ -27,7 +27,7 @@ export function Hero() {
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600" />
             </span>
             <span className="text-xs font-bold text-slate-800">
-              Pioneros en Software OEE & IoT Industrial desde 2009
+              Software OEE & IIoT de Despliegue Rápido desde 2009
             </span>
             <span className="hidden sm:inline-block text-slate-300">|</span>
             <span className="hidden sm:inline-flex items-center gap-1 text-xs text-blue-600 font-semibold">
@@ -37,17 +37,17 @@ export function Hero() {
 
           {/* Main H1 Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12]">
-            Monitoreo de producción en tiempo real para{" "}
+            Deja de perder tiempo en tu piso de planta:{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-600 to-blue-600">
-              ser más eficientes y rentables
+              Monitoreo OEE en tiempo real
             </span>
           </h1>
 
           {/* Subtitle Value Proposition */}
           <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
-            En <strong>MT Solutions</strong> recolectamos datos directamente del piso de planta,
-            midiendo el desempeño <strong>OEE al instante</strong>, eliminando tiempos muertos,
-            digitalizando el pesaje y ahorrando hasta un <strong>35% en energía</strong>.
+            Elimina las planillas en papel y los datos desfasados. En <strong>MT Solutions</strong> conectamos
+            tus máquinas en horas para medir el <strong>OEE automáticamente</strong>, detectar paradas al instante,
+            controlar el pesaje y reducir costos de energía.
           </p>
 
           {/* CTAs */}
@@ -91,10 +91,10 @@ export function Hero() {
           <div className="text-center mb-3">
             <span className="text-[11px] uppercase tracking-widest font-bold text-slate-500 flex items-center justify-center gap-2">
               <Sparkles className="w-3.5 h-3.5 text-blue-600" />
-              Simulador interactivo de telemetría en tiempo real
+              Línea de tiempo de turno en vivo (Haz clic en los bloques para explorar)
             </span>
           </div>
-          <LiveDashboardSimulator />
+          <InteractiveShiftTimeline />
         </div>
       </div>
     </section>
