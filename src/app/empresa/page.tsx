@@ -3,13 +3,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
   Building2,
-  Calendar,
   Globe2,
-  Award,
-  Users,
-  ShieldCheck,
-  ArrowRight,
-  Sparkles,
 } from "lucide-react";
 import { JsonLd } from "@/components/ui/JsonLd";
 import { getBreadcrumbSchema } from "@/lib/schema";
@@ -59,30 +53,30 @@ export default function EmpresaPage() {
   ];
 
   return (
-    <div className="pt-32 pb-24 bg-[#090e17] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
       <JsonLd data={breadcrumb} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950 border border-cyan-500/30 text-xs font-mono font-semibold text-cyan-300 mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-700 mb-3">
             <Building2 className="w-3.5 h-3.5" />
             <span>Nuestra Trayectoria</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-black text-slate-950 tracking-tight">
             Pioneros en IoT Industrial & Software OEE desde 2009
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg mt-4 leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
             Más de 15 años acompañando a plantas manufactureras en su transformación digital,
             eliminando la fricción del papel y entregando datos en tiempo real.
           </p>
         </div>
 
         {/* Story Summary Card */}
-        <div className="p-8 sm:p-12 rounded-3xl glass-card border border-slate-700 mb-20">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-            <div className="space-y-4 text-slate-300 text-sm sm:text-base leading-relaxed">
-              <h2 className="text-2xl sm:text-3xl font-bold text-white">
+        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-md mb-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+            <div className="space-y-4 text-slate-600 text-sm sm:text-base leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
                 Nacidos para hacer el control de planta simple y confiable
               </h2>
               <p>
@@ -98,29 +92,29 @@ export default function EmpresaPage() {
             </div>
 
             <div className="grid grid-cols-2 gap-4">
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-                <div className="text-3xl sm:text-4xl font-black font-mono text-cyan-400">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-sm">
+                <div className="text-3xl sm:text-4xl font-black font-mono text-blue-700">
                   +15
                 </div>
-                <div className="text-xs text-slate-400 mt-1">Años de Innovación</div>
+                <div className="text-xs font-bold text-slate-600 mt-1">Años de Innovación</div>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-                <div className="text-3xl sm:text-4xl font-black font-mono text-emerald-400">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-sm">
+                <div className="text-3xl sm:text-4xl font-black font-mono text-emerald-700">
                   7
                 </div>
-                <div className="text-xs text-slate-400 mt-1">Países con Operaciones</div>
+                <div className="text-xs font-bold text-slate-600 mt-1">Países con Operaciones</div>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-                <div className="text-3xl sm:text-4xl font-black font-mono text-amber-400">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-sm">
+                <div className="text-3xl sm:text-4xl font-black font-mono text-amber-700">
                   +150
                 </div>
-                <div className="text-xs text-slate-400 mt-1">Plantas Conectadas</div>
+                <div className="text-xs font-bold text-slate-600 mt-1">Plantas Conectadas</div>
               </div>
-              <div className="p-5 rounded-2xl bg-slate-900/80 border border-slate-800 text-center">
-                <div className="text-3xl sm:text-4xl font-black font-mono text-purple-400">
+              <div className="p-6 rounded-2xl bg-slate-50 border border-slate-200 text-center shadow-sm">
+                <div className="text-3xl sm:text-4xl font-black font-mono text-purple-700">
                   99.9%
                 </div>
-                <div className="text-xs text-slate-400 mt-1">Disponibilidad Cloud</div>
+                <div className="text-xs font-bold text-slate-600 mt-1">Disponibilidad Cloud</div>
               </div>
             </div>
           </div>
@@ -129,25 +123,25 @@ export default function EmpresaPage() {
         {/* Timeline */}
         <div className="mb-20">
           <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
               Nuestros Hitos de Crecimiento
             </h2>
           </div>
 
-          <div className="space-y-6 max-w-4xl mx-auto">
+          <div className="space-y-4 max-w-4xl mx-auto">
             {milestones.map((m, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 flex flex-col sm:flex-row items-start gap-4 hover:border-cyan-500/40 transition-colors"
+                className="p-6 sm:p-8 rounded-2xl bg-white border border-slate-200 shadow-sm flex flex-col sm:flex-row items-start gap-4 hover:border-blue-300 transition-colors"
               >
-                <div className="px-3.5 py-1.5 rounded-xl bg-cyan-950 border border-cyan-500/40 text-cyan-300 font-mono font-bold text-sm shrink-0">
+                <div className="px-4 py-1.5 rounded-xl bg-blue-50 border border-blue-200 text-blue-700 font-mono font-black text-sm shrink-0">
                   {m.year}
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-white mb-1">
+                  <h3 className="text-lg font-bold text-slate-900 mb-1">
                     {m.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {m.desc}
                   </p>
                 </div>
@@ -157,12 +151,12 @@ export default function EmpresaPage() {
         </div>
 
         {/* Global Presence */}
-        <div className="p-8 sm:p-12 rounded-3xl bg-slate-900/80 border border-slate-800 text-center">
-          <Globe2 className="w-10 h-10 text-cyan-400 mx-auto mb-3" />
-          <h2 className="text-2xl sm:text-3xl font-bold text-white">
+        <div className="p-8 sm:p-12 rounded-3xl bg-white border border-slate-200 shadow-sm text-center">
+          <Globe2 className="w-12 h-12 text-blue-600 mx-auto mb-3" />
+          <h2 className="text-2xl sm:text-3xl font-black text-slate-950">
             Presencia Internacional
           </h2>
-          <p className="text-slate-400 text-sm max-w-lg mx-auto mt-2 mb-8">
+          <p className="text-slate-600 text-sm max-w-lg mx-auto mt-2 mb-8">
             Brindamos soporte y consultoría directa a clientes e integradores en toda América.
           </p>
 
@@ -170,10 +164,10 @@ export default function EmpresaPage() {
             {COUNTRIES.map((c) => (
               <div
                 key={c.code}
-                className="p-3 rounded-xl bg-slate-950/80 border border-slate-800 text-center"
+                className="p-4 rounded-2xl bg-slate-50 border border-slate-200 text-center"
               >
-                <div className="text-2xl mb-1">{c.flag}</div>
-                <div className="text-xs font-semibold text-white">{c.name}</div>
+                <div className="text-3xl mb-1">{c.flag}</div>
+                <div className="text-xs font-bold text-slate-800">{c.name}</div>
               </div>
             ))}
           </div>

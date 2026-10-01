@@ -3,11 +3,8 @@ import Link from "next/link";
 import {
   Activity,
   Mail,
-  Phone,
   Globe,
   ShieldCheck,
-  Zap,
-  Cpu,
   ArrowUpRight,
   Award,
 } from "lucide-react";
@@ -18,21 +15,18 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-[#060911] border-t border-slate-800 text-slate-400 relative overflow-hidden">
-      {/* Glow decorative background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-gradient-to-b from-cyan-500/10 to-transparent blur-3xl pointer-events-none" />
-
+    <footer className="bg-slate-950 border-t border-slate-800 text-slate-400 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800/80">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-slate-800">
           {/* Col 1: Brand & Mission */}
           <div className="lg:col-span-2 space-y-4">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-blue-600 flex items-center justify-center shadow-lg shadow-cyan-500/25">
+              <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-sky-500 flex items-center justify-center shadow-lg shadow-blue-500/25">
                 <Activity className="w-6 h-6 text-white" />
               </div>
               <div className="flex flex-col">
                 <span className="text-xl font-extrabold tracking-tight text-white flex items-center gap-1.5">
-                  MT<span className="text-cyan-400">SOLUTIONS</span>
+                  MT<span className="text-sky-400">SOLUTIONS</span>
                 </span>
                 <span className="text-[11px] text-slate-400">
                   Software OEE & IoT Industrial
@@ -43,17 +37,16 @@ export function Footer() {
             <p className="text-sm text-slate-400 max-w-sm leading-relaxed">
               Pioneros desde 2009 en digitalización de pisos de planta.
               Transformamos máquinas convencionales en fábricas inteligentes
-              mediante monitoreo OEE en tiempo real, pesaje digital y eficiencia
-              energética.
+              mediante monitoreo OEE en tiempo real, pesaje digital y eficiencia energética.
             </p>
 
             <div className="flex items-center gap-3 pt-2">
-              <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-lg">
+              <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg">
                 <ShieldCheck className="w-4 h-4 text-emerald-400" />
                 <span>Norma ISO 50001 Ready</span>
               </div>
-              <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900/90 border border-slate-800 px-3 py-1.5 rounded-lg">
-                <Award className="w-4 h-4 text-cyan-400" />
+              <div className="flex items-center gap-1.5 text-xs text-slate-300 bg-slate-900 border border-slate-800 px-3 py-1.5 rounded-lg">
+                <Award className="w-4 h-4 text-sky-400" />
                 <span>SaaS OEE Certificado</span>
               </div>
             </div>
@@ -63,7 +56,7 @@ export function Footer() {
                 href="https://www.linkedin.com/company/mtsolutions-io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-500/40 transition-colors"
                 aria-label="LinkedIn"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -74,7 +67,7 @@ export function Footer() {
                 href="https://www.youtube.com/@mtsolutions"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-lg bg-slate-800/80 border border-slate-700/60 flex items-center justify-center text-slate-300 hover:text-cyan-400 hover:border-cyan-500/40 transition-colors"
+                className="w-9 h-9 rounded-lg bg-slate-900 border border-slate-800 flex items-center justify-center text-slate-300 hover:text-sky-400 hover:border-sky-500/40 transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
@@ -84,9 +77,9 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Col 2: Suite de Productos */}
+          {/* Col 2: Suite */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Nuestra Suite
             </h3>
             <ul className="space-y-2.5 text-sm">
@@ -94,17 +87,17 @@ export function Footer() {
                 <li key={prod.id}>
                   <Link
                     href={`/suite/${prod.slug}`}
-                    className="hover:text-cyan-400 transition-colors flex items-center justify-between group"
+                    className="hover:text-sky-400 transition-colors flex items-center justify-between group"
                   >
                     <span>{prod.name}</span>
-                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 text-cyan-400 transition-all" />
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 text-sky-400 transition-all" />
                   </Link>
                 </li>
               ))}
               <li className="pt-1">
                 <Link
                   href="/beneficios"
-                  className="text-cyan-400 hover:text-cyan-300 text-xs font-semibold uppercase tracking-wide flex items-center gap-1"
+                  className="text-sky-400 hover:text-sky-300 text-xs font-bold uppercase tracking-wide flex items-center gap-1"
                 >
                   Beneficios del Software OEE →
                 </Link>
@@ -112,44 +105,39 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Empresa & Recursos */}
+          {/* Col 3: Empresa */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4">
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4">
               Compañía
             </h3>
             <ul className="space-y-2.5 text-sm">
               <li>
-                <Link href="/empresa" className="hover:text-cyan-400 transition-colors">
+                <Link href="/empresa" className="hover:text-sky-400 transition-colors">
                   Sobre Nosotros (Trayectoria 2009)
                 </Link>
               </li>
               <li>
-                <Link href="/partners" className="hover:text-cyan-400 transition-colors">
+                <Link href="/partners" className="hover:text-sky-400 transition-colors">
                   Programa de Partners (Hasta 40%)
                 </Link>
               </li>
               <li>
-                <Link href="/blog" className="hover:text-cyan-400 transition-colors">
+                <Link href="/blog" className="hover:text-sky-400 transition-colors">
                   Blog & Casos de Éxito
                 </Link>
               </li>
               <li>
-                <Link href="/contacto" className="hover:text-cyan-400 transition-colors">
+                <Link href="/contacto" className="hover:text-sky-400 transition-colors">
                   Agendar Demostración
-                </Link>
-              </li>
-              <li>
-                <Link href="/sitemap.xml" className="hover:text-cyan-400 transition-colors text-xs text-slate-500">
-                  Mapa del Sitio XML
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Col 4: Líneas Internacionales */}
+          {/* Col 4: Líneas */}
           <div>
-            <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-200 mb-4 flex items-center gap-2">
-              <Globe className="w-4 h-4 text-cyan-400" />
+            <h3 className="text-sm font-bold uppercase tracking-wider text-white mb-4 flex items-center gap-2">
+              <Globe className="w-4 h-4 text-sky-400" />
               <span>Líneas Directas</span>
             </h3>
             <ul className="space-y-2 text-xs">
@@ -160,7 +148,7 @@ export function Footer() {
                   </span>
                   <a
                     href={`tel:${c.phone}`}
-                    className="font-mono text-slate-400 hover:text-cyan-400 transition-colors"
+                    className="font-mono text-slate-400 hover:text-sky-400 transition-colors"
                   >
                     {c.phoneFormatted}
                   </a>
@@ -169,7 +157,7 @@ export function Footer() {
               <li className="pt-2 border-t border-slate-800">
                 <a
                   href="mailto:comercial@mtsolutions.io"
-                  className="flex items-center gap-1.5 text-cyan-400 hover:text-cyan-300 font-medium"
+                  className="flex items-center gap-1.5 text-sky-400 hover:text-sky-300 font-bold"
                 >
                   <Mail className="w-3.5 h-3.5" />
                   <span>comercial@mtsolutions.io</span>
@@ -180,19 +168,16 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             © {currentYear} MT Solutions. Todos los derechos reservados.
             Monitoreo OEE, Pesaje y Eficiencia de Planta.
           </div>
           <div className="flex items-center gap-6">
-            <Link href="/privacidad" className="hover:text-slate-300 transition-colors">
-              Política de Privacidad
-            </Link>
             <Link href="/contacto" className="hover:text-slate-300 transition-colors">
               Soporte Técnico
             </Link>
-            <span className="text-slate-500">v2.5 Enterprise</span>
+            <span className="text-slate-600">v2.5 Enterprise</span>
           </div>
         </div>
       </div>

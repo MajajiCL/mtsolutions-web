@@ -3,10 +3,8 @@ import { Metadata } from "next";
 import Link from "next/link";
 import {
   BookOpen,
-  Calendar,
   Clock,
   ArrowRight,
-  Sparkles,
   Tag,
   User,
 } from "lucide-react";
@@ -30,20 +28,20 @@ export default function BlogIndexPage() {
   ]);
 
   return (
-    <div className="pt-32 pb-24 bg-[#090e17] min-h-screen">
+    <div className="pt-32 pb-24 bg-[#f8fafc] min-h-screen">
       <JsonLd data={breadcrumb} />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-950 border border-cyan-500/30 text-xs font-mono font-semibold text-cyan-300 mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-xs font-bold text-blue-700 mb-3">
             <BookOpen className="w-3.5 h-3.5" />
             <span>Conocimiento & Casos de Estudio</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-black text-white tracking-tight">
+          <h1 className="text-4xl sm:text-5xl font-black text-slate-950 tracking-tight">
             Noticias sobre Eficiencia y OEE
           </h1>
-          <p className="text-slate-300 text-base sm:text-lg mt-4 leading-relaxed">
+          <p className="text-slate-600 text-base sm:text-lg mt-4 leading-relaxed">
             Consejos de expertos, metodologías Lean, reducción de tiempos muertos
             y mejores prácticas para directores de planta e ingenieros de manufactura.
           </p>
@@ -54,40 +52,40 @@ export default function BlogIndexPage() {
           {BLOG_POSTS.map((post) => (
             <article
               key={post.slug}
-              className="p-8 rounded-3xl glass-card border border-slate-700/80 hover:border-cyan-500/50 transition-all flex flex-col justify-between group shadow-xl hover:translate-y-[-3px]"
+              className="p-8 sm:p-10 rounded-3xl bg-white border border-slate-200 hover:border-blue-400 hover:shadow-xl transition-all flex flex-col justify-between group"
             >
               <div>
                 <div className="flex items-center justify-between gap-2 mb-4">
-                  <span className="text-xs font-mono font-semibold px-3 py-1 rounded-full bg-cyan-950 text-cyan-300 border border-cyan-500/30 flex items-center gap-1.5">
+                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-1.5">
                     <Tag className="w-3 h-3" />
                     {post.category}
                   </span>
-                  <div className="flex items-center gap-1.5 text-xs text-slate-400">
+                  <div className="flex items-center gap-1.5 text-xs font-semibold text-slate-500">
                     <Clock className="w-3.5 h-3.5" />
                     <span>{post.readTime}</span>
                   </div>
                 </div>
 
-                <h2 className="text-xl sm:text-2xl font-bold text-white group-hover:text-cyan-400 transition-colors leading-snug">
+                <h2 className="text-xl sm:text-2xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors leading-snug">
                   <Link href={`/blog/${post.slug}`}>
                     {post.title}
                   </Link>
                 </h2>
 
-                <p className="text-slate-300 text-xs sm:text-sm mt-3 leading-relaxed line-clamp-3">
+                <p className="text-slate-600 text-xs sm:text-sm mt-3 leading-relaxed line-clamp-3">
                   {post.excerpt}
                 </p>
               </div>
 
-              <div className="mt-8 pt-5 border-t border-slate-800 flex items-center justify-between">
-                <div className="flex items-center gap-2 text-xs text-slate-400">
-                  <User className="w-3.5 h-3.5 text-slate-500" />
+              <div className="mt-8 pt-5 border-t border-slate-100 flex items-center justify-between">
+                <div className="flex items-center gap-2 text-xs font-medium text-slate-500">
+                  <User className="w-3.5 h-3.5 text-slate-400" />
                   <span>{post.author}</span>
                 </div>
 
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="text-xs font-bold text-cyan-400 hover:text-cyan-300 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
+                  className="text-xs font-bold text-blue-600 hover:text-blue-700 flex items-center gap-1 group-hover:translate-x-0.5 transition-transform"
                 >
                   <span>Leer artículo</span>
                   <ArrowRight className="w-3.5 h-3.5" />

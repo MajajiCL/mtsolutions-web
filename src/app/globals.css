@@ -1,29 +1,29 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090e17;
-  --foreground: #f1f5f9;
-  --card: #0f172a;
-  --card-foreground: #f8fafc;
-  --border: #1e293b;
-  --primary: #00f2fe;
-  --primary-hover: #38bdf8;
-  --accent: #4facfe;
-  --secondary: #1e293b;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --border: #e2e8f0;
+  --primary: #0056b3;
+  --primary-hover: #004085;
+  --accent: #0284c7;
+  --secondary: #f8fafc;
   --muted: #64748b;
-  --muted-foreground: #94a3b8;
-  --success: #10b981;
-  --warning: #f59e0b;
-  --danger: #ef4444;
+  --muted-foreground: #475569;
+  --success: #059669;
+  --warning: #d97706;
+  --danger: #dc2626;
 }
 
 body {
-  background-color: var(--background);
-  color: var(--foreground);
+  background-color: #f8fafc;
+  color: #0f172a;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   overflow-x: hidden;
-  selection-background-color: #00f2fe;
-  selection-color: #090e17;
+  selection-background-color: #0056b3;
+  selection-color: #ffffff;
 }
 
 /* Custom Scrollbar */
@@ -32,66 +32,55 @@ body {
   height: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #090e17;
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #1e293b;
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #334155;
+  background: #94a3b8;
 }
 
-/* Industrial Grid & Glow Background Utilities */
-.bg-grid-pattern {
-  background-image: radial-gradient(rgba(56, 189, 248, 0.12) 1px, transparent 1px);
-  background-size: 32px 32px;
+/* Enterprise Clean Card Styles */
+.enterprise-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.bg-dot-pattern {
-  background-image: radial-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: 24px 24px;
+.enterprise-card:hover {
+  border-color: #93c5fd;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
 }
 
-.glow-cyan {
-  box-shadow: 0 0 40px -10px rgba(0, 242, 254, 0.3);
+/* Grid & Subtle Backgrounds */
+.bg-subtle-grid {
+  background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+  background-size: 28px 28px;
 }
 
-.glow-amber {
-  box-shadow: 0 0 40px -10px rgba(245, 158, 11, 0.3);
+.bg-hero-gradient {
+  background: radial-gradient(circle at 50% 0%, #e0f2fe 0%, #f8fafc 70%);
 }
 
-.glow-emerald {
-  box-shadow: 0 0 40px -10px rgba(16, 185, 129, 0.3);
+.glow-blue {
+  box-shadow: 0 0 35px -5px rgba(2, 132, 199, 0.2);
 }
 
-.glow-purple {
-  box-shadow: 0 0 40px -10px rgba(168, 85, 247, 0.3);
-}
-
-.glass-card {
-  background: rgba(15, 23, 42, 0.75);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.glass-card:hover {
-  border-color: rgba(56, 189, 248, 0.3);
-}
-
-/* Pulse animation for live data points */
-@keyframes pulseGlow {
+/* Telemetry pulse animation */
+@keyframes pulseLive {
   0%, 100% {
     opacity: 1;
     transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: scale(1.08);
+    opacity: 0.5;
+    transform: scale(1.15);
   }
 }
 
-.live-indicator {
-  animation: pulseGlow 2s infinite ease-in-out;
+.live-dot {
+  animation: pulseLive 2s infinite ease-in-out;
 }

@@ -89,11 +89,11 @@ export default function RootLayout({
   const webSiteSchema = getWebSiteSchema();
 
   return (
-    <html lang="es" className="dark scroll-smooth">
+    <html lang="es" className="scroll-smooth">
       <head>
         <JsonLd data={[orgSchema, webSiteSchema]} />
       </head>
-      <body className="min-h-screen flex flex-col bg-[#090e17] text-slate-100 antialiased font-sans">
+      <body className="min-h-screen flex flex-col bg-[#f8fafc] text-slate-900 antialiased font-sans">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />

@@ -17,40 +17,36 @@ import { LiveDashboardSimulator } from "./LiveDashboardSimulator";
 
 export function Hero() {
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-grid-pattern">
-      {/* Radial glow background lights */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[450px] bg-gradient-to-tr from-cyan-600/20 via-blue-600/15 to-transparent blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/3 right-10 w-[350px] h-[350px] bg-emerald-500/10 blur-[120px] pointer-events-none" />
-
+    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-hero-gradient bg-subtle-grid border-b border-slate-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto space-y-6">
           {/* Top Pill Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/90 border border-slate-700/80 shadow-inner backdrop-blur-md">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white border border-blue-200 shadow-sm">
+            <span className="flex h-2.5 w-2.5 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-blue-600" />
             </span>
-            <span className="text-xs font-semibold text-slate-200">
-              Pioneros en IoT Industrial & Software OEE desde 2009
+            <span className="text-xs font-bold text-slate-800">
+              Pioneros en Software OEE & IoT Industrial desde 2009
             </span>
-            <span className="hidden sm:inline-block text-slate-500">|</span>
-            <span className="hidden sm:inline-flex items-center gap-1 text-xs text-cyan-400 font-medium">
+            <span className="hidden sm:inline-block text-slate-300">|</span>
+            <span className="hidden sm:inline-flex items-center gap-1 text-xs text-blue-600 font-semibold">
               <ShieldCheck className="w-3.5 h-3.5" /> +150 Plantas Conectadas
             </span>
           </div>
 
           {/* Main H1 Title */}
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-white tracking-tight leading-[1.15]">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-950 tracking-tight leading-[1.12]">
             Monitoreo de producción en tiempo real para{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-teal-300 to-blue-400">
-              plantas más eficientes y rentables
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-700 via-sky-600 to-blue-600">
+              ser más eficientes y rentables
             </span>
           </h1>
 
           {/* Subtitle Value Proposition */}
-          <p className="text-base sm:text-lg lg:text-xl text-slate-300 max-w-3xl mx-auto leading-relaxed font-normal">
+          <p className="text-base sm:text-lg lg:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
             En <strong>MT Solutions</strong> recolectamos datos directamente del piso de planta,
-            calculando el <strong>OEE</strong> al instante, detectando tiempos muertos ocultos,
+            midiendo el desempeño <strong>OEE al instante</strong>, eliminando tiempos muertos,
             digitalizando el pesaje y ahorrando hasta un <strong>35% en energía</strong>.
           </p>
 
@@ -58,7 +54,7 @@ export function Hero() {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
             <Link
               href="/contacto"
-              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-base text-slate-950 bg-gradient-to-r from-cyan-400 to-teal-400 hover:from-cyan-300 hover:to-teal-300 shadow-xl shadow-cyan-500/25 hover:shadow-cyan-500/40 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
+              className="w-full sm:w-auto px-8 py-4 rounded-xl font-bold text-base text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 hover:scale-[1.02] active:scale-[0.98] transition-all flex items-center justify-center gap-2 group"
             >
               <span>Agendar Demostración en Vivo</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -66,25 +62,25 @@ export function Hero() {
 
             <a
               href="#calculadora"
-              className="w-full sm:w-auto px-7 py-4 rounded-xl font-semibold text-base text-slate-200 bg-slate-900/90 border border-slate-700/80 hover:bg-slate-800 hover:text-white hover:border-slate-600 transition-all flex items-center justify-center gap-2"
+              className="w-full sm:w-auto px-7 py-4 rounded-xl font-bold text-base text-slate-800 bg-white border border-slate-300 hover:bg-slate-50 hover:border-slate-400 shadow-sm transition-all flex items-center justify-center gap-2"
             >
-              <BarChart3 className="w-5 h-5 text-cyan-400" />
-              <span>Calcular ROI de Planta</span>
+              <BarChart3 className="w-5 h-5 text-blue-600" />
+              <span>Calcular Ahorro de Planta</span>
             </a>
           </div>
 
-          {/* Trust bullet features */}
-          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-400">
+          {/* Trust features */}
+          <div className="pt-4 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs sm:text-sm text-slate-600 font-medium">
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Instalación no invasiva en horas</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Integración con SAP, Oracle y PLCs</span>
             </div>
             <div className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-cyan-400" />
+              <CheckCircle2 className="w-4 h-4 text-emerald-600" />
               <span>Retorno de inversión en &lt; 6 meses</span>
             </div>
           </div>
@@ -93,9 +89,9 @@ export function Hero() {
         {/* Live Simulator Showcase */}
         <div className="mt-12 lg:mt-16 max-w-5xl mx-auto">
           <div className="text-center mb-3">
-            <span className="text-[11px] uppercase tracking-widest font-mono text-slate-500 flex items-center justify-center gap-2">
-              <Sparkles className="w-3 h-3 text-cyan-400" />
-              Telemetría interactiva de piso de planta
+            <span className="text-[11px] uppercase tracking-widest font-bold text-slate-500 flex items-center justify-center gap-2">
+              <Sparkles className="w-3.5 h-3.5 text-blue-600" />
+              Simulador interactivo de telemetría en tiempo real
             </span>
           </div>
           <LiveDashboardSimulator />
