@@ -4,6 +4,8 @@ import { PRODUCTS } from "@/data/products";
 import { BLOG_POSTS } from "@/data/blogPosts";
 import { CASE_STUDIES } from "@/data/caseStudies";
 
+export const dynamic = "force-static";
+
 export default function sitemap(): MetadataRoute.Sitemap {
   const currentDate = new Date().toISOString();
 
